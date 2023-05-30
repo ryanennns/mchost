@@ -14,7 +14,9 @@ class PlanFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->word(),
+            'price' => $this->faker->numberBetween(0, 10),
+            'description' => $this->faker->words(3, true),
         ];
     }
 }
